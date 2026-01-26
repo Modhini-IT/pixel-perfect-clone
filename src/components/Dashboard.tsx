@@ -34,7 +34,7 @@ const zoneData = [
   { name: "Lab B", occupancy: 45, capacity: 80, status: "medium" },
   { name: "Library", occupancy: 120, capacity: 150, status: "high" },
   { name: "Cafeteria", occupancy: 30, capacity: 200, status: "low" },
-  { name: "Auditorium", occupancy: 0, capacity: 300, status: "empty" },
+  { name: "MPH", occupancy: 0, capacity: 300, status: "empty" },
 ];
 
 // Energy usage data
