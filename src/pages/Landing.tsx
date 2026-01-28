@@ -72,8 +72,6 @@ const Landing = () => {
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
             Smart Face Recognition & Movement Tracking System
-            <br />
-            <span className="text-primary">Powered by AI. Driven by Sustainability.</span>
           </motion.p>
         </motion.div>
       </div>
