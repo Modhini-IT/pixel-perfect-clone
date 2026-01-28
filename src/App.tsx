@@ -10,7 +10,7 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
-import ClickSpark from "./components/ClickSpark";
+
 import DockNavigation from "./components/DockNavigation";
 
 const queryClient = new QueryClient();
@@ -20,7 +20,7 @@ const AppContent = () => {
   const showDock = !['/signin', '/'].includes(location.pathname);
 
   return (
-    <ClickSpark sparkColor="hsl(160, 100%, 50%)" sparkSize={12} sparkRadius={20} sparkCount={10}>
+    <>
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/signin" element={<SignIn />} />
@@ -32,7 +32,7 @@ const AppContent = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
       {showDock && <DockNavigation />}
-    </ClickSpark>
+    </>
   );
 };
 
