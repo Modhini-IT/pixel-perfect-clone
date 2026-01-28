@@ -37,8 +37,6 @@ const DockNavigation = () => {
     <div className="fixed bottom-6 left-0 right-0 z-50 px-4">
       <Dock
         items={dockItems}
-        magnification={65}
-        distance={140}
         panelHeight={60}
         baseItemSize={45}
       />
