@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
 import About from "./pages/About";
 import AttendancePage from "./pages/AttendancePage";
+import AnalyticsPage from "./pages/AnalyticsPage";
 import NotFound from "./pages/NotFound";
 import ClickSpark from "./components/ClickSpark";
 import DockNavigation from "./components/DockNavigation";
@@ -27,6 +28,7 @@ const AppContent = () => {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/attendance" element={<AttendancePage />} />
+        <Route path="/analytics" element={<AnalyticsPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/about" element={<About />} />
