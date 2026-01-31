@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { Home, User, Settings, LayoutDashboard } from "lucide-react";
+import { Home, User, Settings, LayoutDashboard, ClipboardList } from "lucide-react";
 import Dock from "./Dock";
 
 const DockNavigation = () => {
@@ -18,6 +18,12 @@ const DockNavigation = () => {
       label: "Dashboard",
       onClick: () => navigate('/dashboard'),
       className: location.pathname === '/dashboard' ? 'ring-2 ring-primary' : ''
+    },
+    {
+      icon: <ClipboardList className="w-6 h-6" />,
+      label: "Attendance",
+      onClick: () => navigate('/attendance'),
+      className: location.pathname === '/attendance' ? 'ring-2 ring-primary' : ''
     },
     {
       icon: <User className="w-6 h-6" />,
