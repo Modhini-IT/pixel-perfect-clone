@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Zap, Shield, Users, Leaf, Cpu, ScanFace } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import Team from "@/components/Team";
 import TechSpecs from "@/components/TechSpecs";
 import Footer from "@/components/Footer";
+import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const About = () => {
@@ -47,6 +48,122 @@ const About = () => {
               An AI-driven face recognition and movement tracking system designed for sustainable campus monitoring. Combining cutting-edge technology with eco-friendly operations.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* ScrollStack Feature Cards */}
+      <section className="relative py-16 overflow-hidden">
+        <div className="absolute inset-0 gradient-cosmic opacity-30" />
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+              Key <span className="text-gradient-eco">Features</span>
+            </h2>
+          </motion.div>
+
+          <ScrollStack className="max-w-3xl mx-auto">
+            <ScrollStackItem>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <ScanFace className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    AI-Powered Face Recognition
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Advanced machine learning algorithms for accurate identification with 99.5% accuracy rate. Works in various lighting conditions and angles.
+                  </p>
+                </div>
+              </div>
+            </ScrollStackItem>
+
+            <ScrollStackItem>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Cpu className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    Edge Computing
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Process data locally on edge devices to minimize latency, reduce bandwidth usage, and ensure privacy. No cloud dependency for critical operations.
+                  </p>
+                </div>
+              </div>
+            </ScrollStackItem>
+
+            <ScrollStackItem>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Leaf className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    Eco-Friendly Operations
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Solar-powered camera units with intelligent power management. Carbon-neutral infrastructure with optimized energy consumption.
+                  </p>
+                </div>
+              </div>
+            </ScrollStackItem>
+
+            <ScrollStackItem>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Shield className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    Privacy-First Design
+                  </h3>
+                  <p className="text-muted-foreground">
+                    All biometric data is anonymized and encrypted. GDPR-compliant with full user consent management and data portability.
+                  </p>
+                </div>
+              </div>
+            </ScrollStackItem>
+
+            <ScrollStackItem>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    Scalable Infrastructure
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Support for 10,000+ concurrent users with horizontal scaling. Microservices architecture ensures reliability and easy updates.
+                  </p>
+                </div>
+              </div>
+            </ScrollStackItem>
+
+            <ScrollStackItem>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-foreground mb-2">
+                    Real-Time Analytics
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Instant insights and reporting with live dashboards. Track attendance, movement patterns, and energy usage in real-time.
+                  </p>
+                </div>
+              </div>
+            </ScrollStackItem>
+          </ScrollStack>
         </div>
       </section>
 
