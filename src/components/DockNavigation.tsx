@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import { Home, User, Settings, LayoutDashboard, ClipboardList, BarChart3, Users } from "lucide-react";
+import { Home, User, Settings, LayoutDashboard, ClipboardList, BarChart3, Users, Scan } from "lucide-react";
 import Dock from "./Dock";
 
 const DockNavigation = () => {
@@ -36,6 +36,12 @@ const DockNavigation = () => {
       label: "Students",
       onClick: () => navigate('/students'),
       className: location.pathname === '/students' ? 'ring-2 ring-primary' : ''
+    },
+    {
+      icon: <Scan className="w-6 h-6" />,
+      label: "Face Detection",
+      onClick: () => navigate('/face-detection'),
+      className: location.pathname === '/face-detection' ? 'ring-2 ring-primary' : ''
     },
     {
       icon: <User className="w-6 h-6" />,
